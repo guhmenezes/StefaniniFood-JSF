@@ -1,0 +1,25 @@
+<!--<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+    <ui:define name="body">
+        <h:form id="ConsumerCreateForm">
+
+            <h2> Cadastrar Empresa</h2>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="name">Nome:</h:outputLabel>
+                <p:inputText id="name" value="#{consumerController.consumer.name}" title="Nome" required="true" requiredMessage="Nome Obrigatório"></p:inputText>
+                <h:outputLabel for="cnpj">CNPJ:</h:outputLabel>
+                <p:inputMask id="cpf" value="#{consumerController.consumer.cpf}" title="CNPJ" required="true" requiredMessage="CNPJ Obrigatório" mask="99.999.999/9999-99"/>
+                <h:outputLabel for="password">Senha:</h:outputLabel>
+                <p:inputText id="balance"  title="Senha" required="true" requiredMessage="Senha Obrigatória"></p:inputText>
+                <p:commandButton value="Cadastrar" class="submit" actionListener="#{consumerController.create}" update="ConsumerCreateForm, :growl"></p:commandButton>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+</ui:decorate>
+-->

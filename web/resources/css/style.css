@@ -1,0 +1,113 @@
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+.ui-widget-header {
+    text-align: center;
+    text-transform: uppercase;
+}
+.ui-button {
+    margin-top: 10px !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: red;
+    color: white;
+}
+
+.welcome{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.acess, .acess:active, .acess::after{
+    margin: 4rem auto;
+    display:  block;
+    width: 100%;
+    text-align: center;
+    color: white !important;
+    text-decoration: none;
+}
+
+.navbar{
+    padding: 1rem 2rem !important;
+    margin: 0 -5px;
+    box-shadow: rgba(0,0,0,.4) 0 5px 10px;
+}
+
+.logo span {
+    font-size: 2rem;
+}
+
+.menu{
+    position: absolute;
+    right: 14.5rem;
+}
+
+.register{
+    position: absolute;
+    right: 24.5rem;
+}
+
+.info{
+    position: absolute;
+    right: 4rem;
+}
+
+h2{
+    padding: 2rem !important;
+    text-align: center;
+}
+
+.selectCompany{
+    padding: 2rem !important;
+}
+
+#ProductListForm, table{
+    padding: 0 0.5rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    /*height:300px;*/
+}
+
+input{
+    min-width: 200px;
+    margin-right: 1rem;
+}
+
+.submit{
+    margin-left: 40px;
+}
+
+.btnLogin{
+    margin-left: 52px !important;
+}
+
+.companies{
+    min-width: 200px;
+    margin-left: .5rem;
+}
+
+td button{
+    margin-bottom: .9rem !important;
+    margin-left: .5rem;
+}
+
+.order{
+    
+}

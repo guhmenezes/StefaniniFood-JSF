@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+    <ui:define name="body">
+        <!--        <h2> Atualizar Dados</h2>
+                <h:panelGrid columns="4">
+                    <h:outputLabel for="name">Nome:</h:outputLabel>
+                    <p:inputText id="name"></p:inputText>
+                    <h:outputLabel for="cnpj">CNPJ:</h:outputLabel>
+                    <p:inputText id="cnpj"></p:inputText>
+                    <h:outputLabel for="phone">Celular:</h:outputLabel>
+                    <p:inputText id="phone"></p:inputText>
+                    <h:outputLabel for="email">E-mail:</h:outputLabel>
+                    <p:inputText id="email"></p:inputText>
+                    <p:button value="Atualizar"></p:button>
+                </h:panelGrid>
+                <hr/>
+                    <h2> Alterar Senha</h2>
+                <h:panelGrid columns="4">
+                    <h:outputLabel for="password">Nova Senha:</h:outputLabel>
+                    <p:inputText id="password"></p:inputText>
+                    <h:outputLabel for="password">Confirmar Nova Senha:</h:outputLabel>
+                    <p:inputText id="password"></p:inputText>
+                    <p:button value="Atualizar"></p:button>
+                </h:panelGrid>-->
+        <h2>Empresas cadastradas</h2>
+        <h:panelGrid>
+            <p:dataTable id="infoDT" value="#{companyController.companies}" var="company">
+                <p:column headerText="ID">
+                    <h:outputText value="#{company.id}"/>
+                </p:column>
+                <p:column headerText="CNPJ">
+                    <h:outputText value="#{company.cnpj}"/>
+                </p:column>
+                <p:column headerText="Nome">
+                    <h:outputText value="#{company.name}"/>
+                </p:column>
+            </p:dataTable>
+        </h:panelGrid>
+    </ui:define>
+
+</ui:decorate>
+
+

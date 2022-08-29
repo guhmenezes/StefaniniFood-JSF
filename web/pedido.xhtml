@@ -1,0 +1,79 @@
+<!--<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             template="template.xhtml">
+    <ui:define name="body">
+        <h:form id="ProductListForm">
+                            <div>
+                    <h:panelGrid class="selectCompany" columns="3"  rendered="#{companyController.companies.size() > 0}">
+                    <p:outputLabel>Selecione Empresa:</p:outputLabel>
+                    <p:selectOneMenu id="companyId" class="companies" value="#{orderController.order.consumer}">
+                        <f:selectItems value="#{consumerController.consumers}" var="consumer"
+                                       itemLabel="#{consumer.name}" itemValue="#{consumer}"/>
+                    </p:selectOneMenu>
+                    <p:commandButton value="Selecionar Cliente"></p:commandButton>
+                </h:panelGrid>
+                </div>
+                <div>
+                    <h:panelGrid class="selectCompany" columns="3"  rendered="#{companyController.companies.size() > 0}">
+                    <p:outputLabel>Selecione Empresa:</p:outputLabel>
+                    <p:selectOneMenu id="companyId" class="companies" value="#{companyController.company.id}">
+                        <f:selectItems value="#{companyController.companies}" var="company"
+                                       itemLabel="#{company.name}" itemValue="#{company.id}"/>
+                    </p:selectOneMenu>
+                    <p:commandButton value="Exibir Cardápio"></p:commandButton>
+                </h:panelGrid>
+                </div>
+        <h2>Lista de Produtos</h2> 
+            <h2> Cardápio</h2>
+            <p:dataTable id="datalist" value="#{productController.products}" var="item"
+                         selectionMode="single" selection="#{productController.selected}"
+                         rowKey="#{item.id}"
+                         >
+
+                <p:ajax event="rowSelect"   update="createButton editButton deleteButton"/>
+                <p:ajax event="rowUnselect" update="createButton editButton deleteButton"/>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Código"/>
+                    </f:facet>
+                    <h:outputText value="#{item.id}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Produto"/>
+                    </f:facet>
+                    <h:outputText value="#{item.name}"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Preço R$"/>
+                    </f:facet>
+                    <h:outputText value="#{item.price}">
+                        <f:convertNumber pattern="#0.00" locale="pt_BR"/>
+                    </h:outputText>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Descrição"/>
+                    </f:facet>
+                    <h:outputText value="#{item.description}"/>
+                </p:column>
+
+                <f:facet name="footer">
+                    <p:commandButton id="createButton" icon="ui-icon-plus"   value="Incluir" actionListener="#{productController.prepareCreate}" update=":ProductCreateForm" oncomplete="PF('ProductCreateDialog').show()"/>
+                    <p:commandButton id="editButton"   icon="ui-icon-pencil" value="Alterar" update=":ProductEditForm" oncomplete="PF('ProductEditDialog').show()" disabled="#{empty productController.selected}"/>
+                    <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="Excluir" actionListener="#{productController.delete}" update=":growl,datalist" disabled="#{empty productController.selected}"/>
+                </f:facet>
+            </p:dataTable>
+
+        </h:form>
+
+        <ui:include src="Incluir.xhtml"/>
+        <ui:include src="Editar.xhtml"/>
+    </ui:define>
+</ui:decorate>-->
